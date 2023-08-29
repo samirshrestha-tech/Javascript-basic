@@ -358,20 +358,189 @@ multi line comment
 // console.log(arg);
 
 // challege #1
+
+//
+
 // 1. create an array of 50 random number programmaically ranges between 1 and 100.
-// 2 .sort the array in descending order
-// 3. Get the total of the array
-// 4. Divide the original array into 2 new arrays that contains even or odd numbers only each.
-// 5. remove duplicates number for the original array
+// let arr = [];
+// for (let i = 0; i < 50; i++) {
+//   arr.push(Math.floor(Math.random() * 100 + 1));
+// }
+// // 3. Get the total of the array
+// const total = arr.reduce((acc, item) => {
+//   return acc + item;
+// }, 0);
 
-let arr = [];
-for (let i = 0; i < 100; i++) {
-  arr.push(Math.floor(Math.random() * 100 + 1));
-}
-const total = arr.reduce((acc, item) => {
-  return acc + item;
-}, 0);
+// console.log(arr);
+// // 2 .sort the array in descending order
+// console.log(arr.sort((a, b) => b - a));
+// console.log(total);
+// // 4. Divide the original array into 2 new arrays that contains even or odd numbers only each.
+// const odd = arr.filter((od) => {
+//   return od % 2 !== 0;
+// });
+// const even = arr.filter((eve) => eve % 2 === 0);
+// console.log(even, odd);
+// // 5. remove duplicates number for the original array
+// const uniqueArg = arr.filter((item, i) => i === arr.indexOf(item));
+// console.log(uniqueArg);
 
-console.log(arr);
-console.log(arr.sort((a, b) => b - a));
-console.log(total);
+// const array = [];
+// while (array.length < 50) {
+//   const a = Math.floor(Math.random() * 100) + 1;
+//   if (!array.includes(a)) {
+//     array.push(a);
+//   }
+// }
+// console.log(array);
+// console.log(array.sort());
+
+// object
+
+// to store multiple information for an individual item.
+
+// console.log(person);
+
+// how to access the object
+// console.log(person.name);
+// console.log(person["active"]);
+// to change the properties
+// person.name = "sfja";
+// console.log(person.name);
+// console.log(person.skills[2]);
+// console.log(person.parent.father);
+// to add a property we put it in left side and assign a value to it.
+// person.gender = "n/A";
+// console.log(person.gender);
+// to delete the the data from the original object
+
+// for (let key in person) {
+// console.log(key, person[key]);
+// }
+// convert object into array
+// const p = Object.keys(person);
+// console.log(p);
+// Destructuring
+// const { fname = "dfs", fadd = "kfjlja" } = person;
+// console.log(fname, fadd);
+// console.log(person);
+
+// Default + Rest + Spread
+// const bio=()=>{
+//   const{name,add}=
+// }
+// const p = {
+//   name: "sam",
+//   add: "sydney",
+// };
+// const career = {
+//   educatiion: "bsc",
+//   year: 2023,
+// };
+
+// ways to combine two objects
+// const samobj = Object.assign({}, p, career);
+// p.name = "harry";
+// console.log(samobj);
+
+// spread operator to combine two object
+// const samobj = {
+//   ...p,
+//   ...career,
+// };
+// console.log(samobj);
+
+// before the = sign the ... operator acts as rest
+
+// const { name, ...rest } = samobj;
+// console.log(name, rest);
+
+//
+
+// delete person.name;
+// console.log(person);
+// Date()
+
+// const today = Date();
+// const today = Date.now();
+// const today = new Date("2020-8-10");
+// const data = today.toDateString();
+// const data = today.getDay();
+// const data = today.getFullYear();
+// const data = today.getMonth();
+// const data = today.getDay();
+
+// today.setDate(today.getDate() + 5);
+// console.log(typeof today, today);
+
+// challenge #1 Create a function that takes foods and the expire date and returns one of the followings:
+// 1. if expired: AB is expired 4 days ago.
+
+//2. if not expired: you have 10 days to use this product
+// 1. create couple food objects with name and exp
+// 2. create one function which checks the date return message like above.
+
+// const foods =[
+//   {
+//     name: " tuna",
+//     exp: "2023-10-15",
+//   },
+//   {
+//     name: "mile",
+//     exp:"2023-9-15",
+//   }
+// ]
+// const today=new Date();
+// const
+// function checkExpiration(foods) {
+//   const today = new Date();
+//   const messages = [];
+
+//   foods.forEach((food) => {
+//     const expirationDate = new Date(food.expireDate);
+//     const daysRemaining = Math.ceil(
+//       (expirationDate - today) / (1000 * 60 * 60 * 24)
+//     );
+
+//     if (daysRemaining < 0) {
+//       const daysAgo = Math.abs(daysRemaining);
+//       messages.push(
+//         `${food.name} is expired ${
+//           daysAgo === 1 ? "1 day" : `${daysAgo} days`
+//         } ago.`
+//       );
+//     } else {
+//       messages.push(
+//         `You have ${
+//           daysRemaining === 1 ? "1 day" : `${daysRemaining} days`
+//         } to use ${food.name}.`
+//       );
+//     }
+//   });
+
+//   return messages;
+// }
+
+// // Example food objects
+// const foods = [
+//   { name: "Apple", expireDate: "2023-08-25" },
+//   { name: "Milk", expireDate: "2023-09-02" },
+//   { name: "Bread", expireDate: "2023-08-20" },
+// ];
+
+// const messages = checkExpiration(foods);
+// messages.forEach((message) => console.log(message));
+
+// const check =foods.forEach()=>{
+//   if(foods.exp===Date()){
+//     console.log("The food is expired today.")
+//   }
+//   else {
+//     console.log("first")
+//   }
+// };
+// console.log(check)
+
+// Formate
+// Get Methods
+// Set Methods
