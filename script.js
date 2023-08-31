@@ -309,18 +309,35 @@ multi line comment
 // manipulation of array
 // const fruits = ["banana", "mango", "orange"];
 // add item at the end
-// fruits.push("apple");
+
+// console.log(fruits.push("apple"));
+// console.log(fruits);
 // fruits.shift("apple");
+// .shift() removes the first element of the original array and returns the element. It also mutates the original array.
+
 // fruits.unshift("apple");
+// .unshift() method adds one or more elements to the beginning of an array and returns the new length of the array. It does not return the array but its length. It also mutates the original array by adding elements at the beginning.
+// console.log(fruits);
 // fruits.unshift("mango");
 // const dt = fruits.pop();
+// .pop() method removes the last element from an array and returns the element. It also mutates the original array by removing the last element.
 // const dt = fruits.slice(1, 2);
-// const dt = fruits.splice(1, 0, "berry");
+// slice returns new array containing selected elements from the original array without modifying the original array.
+// const dt = fruits.splice(1, 2, "berry");
+// console.log(fruits);
+// "Splice" can be used to add or remove elements from an array, modifying the original array.
 // console.log(dt);
 // console.log(fruits.sort());
+// .sort() method sorts the element of an array in place and returns the sorted array.
+// it modifies the new array and doesnot create a new one.
+// console.log(fruits);
+
 // console.log(fruits.reverse());
+// reverse method reverses the order of elemennts in an array. It modifies the original array and doesn't create a new array.
+
 // const num = [23, 454, 47, 2, 40];
-// console.log(num.sort((a, b) => a - b));
+// in case of sorting numbers it only sort the number in first place and ignores the rest so it is hard to sort number with this method. We can introduce compare function to customize the desired behavior.
+// console.log(fruits.sort((a, b) => a.length - b.length));
 // // sorts the array in ascending orders
 // console.log(fruits.toString().split(","));
 
